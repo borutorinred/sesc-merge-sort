@@ -1,9 +1,7 @@
-PROGRAM=sesc-merge-sort
+run: sesc-merge-sort
+	./sesc-merge-sort
+	
+sesc-merge-sort: sesc-merge-sort.c
+	gcc -Wall -std=c11 sesc-merge-sort.c -o sesc-merge-sort
 
-run: ${PROGRAM}
-	./${PROGRAM}
-
-${PROGRAM}: ${PROGRAM}.c
-	gcc -Wall -std=c11 ${PROGRAM}.c -o ${PROGRAM}
-
-build: ${PROGRAM}
+build: sesc-merge-sort
